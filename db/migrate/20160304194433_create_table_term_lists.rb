@@ -9,4 +9,4 @@ class CreateTableTermLists < ActiveRecord::Migration
    end
 end
 
-
+end
