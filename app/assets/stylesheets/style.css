@@ -1,0 +1,66 @@
+/* CSS Document */
+
+body{background:#fff; color:#555; font:15px/20px Arial, Helvetica, sans-serif; margin:32px 0 0; padding:0;}
+
+input{text-align:center;}
+
+/* Search Bar styling */
+#search .form { height:150px; }
+#search_field {
+    width: 80%;
+    padding: 7px;
+    font-size: 40px;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}  
+
+/* TOP PANEL*/
+#topPanel{
+  width:80%; 
+  height:70px; 
+  position:relative; 
+  margin:0 auto; 
+  padding:0;
+}
+#topPanel img{
+  width:180px; 
+  height:180px; 
+  z-index:1; 
+  padding:0; 
+  position:absolute; 
+  margin:0 0 0 0;
+}
+#topPanel .headone { 
+  font-size:20px; 
+  font-weight:bold; 
+  font:Arial; 
+  color:#555; 
+  background:#fff;
+}
+
+
+/* Term Results Styling */
+#term-listing { 
+  width:80%;
+  padding:0px 20px 20px 20px; 
+  margin:3;
+  position:relative; 
+  margin: auto; 
+}
+
+#term-listing h1{
+  font-size: 36px;
+  line-height: 36px;
+  width: 80%;
+  top: 40px;
+
+}
+
+
+/* FOOTER PANEL*/
+.clearfooter {
+	height: 30px;
+	clear: both;
+}
