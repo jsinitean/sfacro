@@ -1,20 +1,83 @@
 /* CSS Document */
 
-body{background:#fff; color:#555; font:15px/20px Arial, Helvetica, sans-serif; margin:32px 0 0; padding:0;}
+body {
+  background:#fff; 
+  color:#555; 
+  font:15px/20px Arial, Helvetica, sans-serif; 
+  margin:32px 0 0; 
+  padding:0;
+  text-align: center;
+}
 
-input{text-align:center;}
+input {
+  text-align:center;
+}
+
+.center {
+    margin: auto;
+    width: 85%;
+    padding: 10px;
+}
 
 /* Search Bar styling */
-#search .form { height:150px; }
+#search .form { 
+  height:150px; 
+}
+
 #search_field {
-    width: 80%;
-    padding: 7px;
-    font-size: 40px;
-    background: #444;
-    background: rgba(0,0,0,.2);
-    border-radius: 8px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  width: 80%;
+  padding: 7px;
+  font-size: 40px;
+  background: #444;
+  background: rgba(0,0,0,.2);
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 }  
+
+#team-list img{
+  width:120px; 
+  height:120px; 
+  border-radius: 25%;
+  margin:0 0 0 0;
+  opacity: 0.9;
+}
+
+#team-list img.yoda{
+  width:48px; 
+  height:48px; 
+  border-radius: 25%;
+  margin:0 0 0 0;
+  opacity: 0.9;
+  z-index: 4;
+  position: relative;
+  right: 150px;
+}
+
+#team-list th, td {
+  padding: 15px;
+  font:24px Arial;
+}
+
+#team-list a:link {
+  text-decoration: none;
+  background-color: #1798c1;
+  color: white;
+  padding: 10px 10px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+#team-list a:visited {
+  background-color: #566b81;
+  text-decoration: none;
+  color: white;
+}
+
+#team-list a:hover, a:active {
+  background-color: #566b81;
+}
 
 /* TOP PANEL*/
 #topPanel{
@@ -54,11 +117,55 @@ input{text-align:center;}
   line-height: 36px;
   width: 80%;
   top: 40px;
-
 }
 
 /* FOOTER PANEL*/
 .clearfooter {
 	height: 30px;
 	clear: both;
+}
+
+/* Scrolling text css */
+.example1 {
+ height: 50px;  
+ overflow: hidden;
+ position: relative;
+}
+
+.example1 h3 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ /* Apply animation to this element */  
+ -moz-animation: example1 25s linear infinite;
+ -webkit-animation: example1 25s linear infinite;
+ animation: example1 25s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
 }
