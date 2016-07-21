@@ -22,9 +22,14 @@
 	<% @teams.each do |team| %>
 		<table>
 		<tr>
-			<td><img src='/assets/<%= team.photo %>'>
+			<td><img src=/<%= team.photo %>>
 
-				<img src='/assets/yoda_star_wars.gif' class='yoda' />
+				<% case team.yoda when false %>
+
+				<% when true %>
+					<img src='/yoda_star_wars.gif' class='yoda' />
+				<% end %>
+
 			</td>
 			<td><%= team.first_name %> <%= team.last_name %></td>
 			<td><a href='<%= team.url %>' target="_blank">Org62 Profile →</a></td>
@@ -33,5 +38,6 @@
 	<% end %>
 </div>
 </div>
+
 
 
