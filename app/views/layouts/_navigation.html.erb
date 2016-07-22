@@ -1,0 +1,102 @@
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Brand" src="/logo2.png" size='20x20'>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="https://org62.my.salesforce.com/a1T300000008OOcEAM" target="_blank">SDO <span class="glyphicon glyphicon-download"></span></a></li>
+        <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dashboards <span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="https://org62.lightning.force.com/one/one.app#eyJjb21wb25lbnREZWYiOiJlLmZvcmNlOm5hdmlnYXRlVG9VUkwiLCJhdHRyaWJ1dGVzIjp7InVybCI6Imh0dHA6Ly9vcmc2Mi5teS5zYWxlc2ZvcmNlLmNvbS8wMVozMDAwMDAwMHdjVUUiLCJpc3JlZGlyZWN0Ijp0cnVlfX0=" target="_blank"><span class="glyphicon glyphicon-flash"></span> ESB Dashboard</a></li>
+	          <li><a href="https://org62.lightning.force.com/one/one.app#eyJjb21wb25lbnREZWYiOiJlLmZvcmNlOm5hdmlnYXRlVG9VUkwiLCJhdHRyaWJ1dGVzIjp7InVybCI6Imh0dHA6Ly9vcmc2Mi5teS5zYWxlc2ZvcmNlLmNvbS8wMVozMDAwMDAwMHdjVUo/ZnJvbUVtYWlsPTEmczFvaWQ9MDBEMDAwMDAwMDAwMDYyJnMxbmlkPTAwMDAwMDAwMDAwMDAwMCZzMXVpZD0wMDUzMDAwMDAwQzBMcUUmczFleHQ9MCZlbWtpbmQ9Y2hhdHRlclBvc3ROb3RpZmljYXRpb24mZW10bT0xNDY5MjA4NDMzMDM3IiwiaXNyZWRpcmVjdCI6dHJ1ZX19" target="_blank"><span class="glyphicon glyphicon-flash"></span> SMB Dashboard</a></li>
+	        </ul>
+      	</li>
+  
+        <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources <span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="https://activityeditor.herokuapp.com/#/calendar" target="_blank"><span class="glyphicon glyphicon-time"></span> Activities Editor</a></li>
+	          <li><a href="https://developer.salesforce.com/" target="_blank"><span class="glyphicon glyphicon glyphicon-flag"></span> Developers</a></li>
+	          <li><a href="https://developer.salesforce.com/trailhead/" target="_blank"><span class="glyphicon glyphicon-tree-conifer"></span> Trailhead</a></li>
+	          <li><a href="https://help.salesforce.com/home" target="_blank"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+	          <li role="separator" class="divider"></li>
+	          <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#">Internal <span class="glyphicon glyphicon-triangle-right"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="https://concierge.it.salesforce.com/" target="_blank"><span class="glyphicon glyphicon-user"></span> Concierge</a></li>
+			          <li><a tabindex="-1" href="https://orgchart.it.salesforce.com/" target="_blank">Org Chart</a></li>
+			          <li><a tabindex="-1" href="https://docs.google.com/presentation/d/1yq0KL_73_jwfMCHr8Ia0XeSBxRqvL7HR-v4giSWu2JY/edit#slide=id.g72478f6af_8_0" target="_blank">Google Slides</a></li>
+			          <li><a tabindex="-1" href="https://docs.google.com/document/d/1NqLH1qP7_YubTNn3fLZAW6pfnzvTyGN4a8f3QRWU1kk/edit" target="_blank">Steelbrick Resource</a></li>
+			          <li><a tabindex="-1" href="https://docs.google.com/spreadsheets/d/1VnRIWr3VW_ciQx_vTmt-NTby-8VnqmcxAuYmPrQD81c/edit#gid=0" target="_blank">Haircut SignUp</a></li>
+			        </ul>
+			  </li>
+
+	          <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#"><span class="glyphicon glyphicon-cog"></span> Demo Build Tools <span class="glyphicon glyphicon-triangle-right"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="http://salesforce.photoshelter.com/gallery/Salesforce-Royalty-Free-Images/G0000fo.fGgK.NRY/C00005eU6frlQsQI" target="_blank">Stock Images</a></li>
+			          <li><a tabindex="-1" href="https://org62.lightning.force.com/one/one.app#/sObject/a2x30000002qMcYAAU/view?t=1469211493880" target="_blank">Anything Path</a></li>
+			          <li><a tabindex="-1" href="https://placeit.net/" target="_blank">Place It</a></li>
+			          <li><a tabindex="-1" href="http://smartmockups.com/" target="_blank">Smart Mockups</a></li>
+			          <li><a tabindex="-1" href="https://www.cur8r.io/microsoft-partnership/salesforce-app-for-outlook" target="_blank">Salesforce for Outlook</a></li>
+			        </ul>
+			  </li>
+
+
+	          <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#">Customers <span class="glyphicon glyphicon-triangle-right"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="https://tenkara.herokuapp.com/" target="_blank">Tenkara</a></li>
+			          <li><a tabindex="-1" href="https://www.cur8r.io/salesforce-industries" target="_blank">Industries</a></li>
+			          <li class="dropdown-submenu">
+			            <a class="test" href="#">Success Stories <span class="glyphicon glyphicon-triangle-right"></span></a>
+			            <ul class="dropdown-menu">
+			              <li><a href="http://www.salesforce.com/customers/" target="_blank">Customer Success Stories</a></li>
+			              <li><a href="http://www.salesforce.com/small-business-solutions/" target="_blank">SMB Success Stories</a></li>
+			            </ul>
+			          </li>
+			        </ul>
+			   </li>
+
+			   <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#">Volunteer <span class="glyphicon glyphicon-triangle-right"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="https://code.org/learn?company=salesforceday1" target="_blank">Hour of Code</a></li>
+			          <li><a tabindex="-1" href="https://foundation.my.salesforce.com/apex/Volunteerforce1?sfdc.tabName=01r80000000Gzb4#/" target="_blank"><span class="glyphicon glyphicon-star-empty"></span> Volunteer Force</a></li>
+			        </ul>
+			  </li>
+
+
+			</ul>
+		</li>
+      	
+
+
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<li><a href="https://readiness--c.na6.visual.force.com/apex/alfredhome#/favorites" target="_blank"><span class="glyphicon glyphicon-floppy-disk"></span> Basecamp</a></li>
+        <li><a href="https://org62.my.salesforce.com/" target="_blank"><span class="glyphicon glyphicon-log-in"></span> Org62</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

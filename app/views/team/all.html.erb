@@ -1,42 +1,87 @@
-<div class='center'>
-<h2>Heard a term at Salesforce you didn't recognize?</h2>
-<p></p>
-
-<div id="search">
-  <%= render :partial => 'welcome/search' %>
+<div class="row">
+	<div class="col-xs-12">
+		<div class='center'>
+			<h3>Heard a term at Salesforce you didn't recognize?</h3>
+		</div>
+	</div>
 </div>
 
-<p></p>
-<%= image_tag 'logo2.png', :size => '180x113' %>
-<p></p>
+<div class="row">
+	<div class="col-xs-12">
+		<div id="search">
+			<%= render :partial => 'welcome/search' %>
+		</div>
+	</div>
 </div>
 
-<div class="example1">
-<h3>Haven't you missed scrolling text? It's been a long time!</h3>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="logo_pad">
+			<%= image_tag 'logo2.png', :size => '180x113' %>
+		<div>	
+	</div>
 </div>
 
-<div class='center'>
-<h1>ESMB Central Solution Engineers</h1><%= @teams.size %>
-
-<div id="team-list">
-	<% @teams.each do |team| %>
-		<table>
-		<tr>
-			<td><img src=/<%= team.photo %>>
-
-				<% case team.yoda when false %>
-
-				<% when true %>
-					<img src='/yoda_star_wars.gif' class='yoda' />
-				<% end %>
-
-			</td>
-			<td><%= team.first_name %> <%= team.last_name %></td>
-			<td><a href='<%= team.url %>' target="_blank">Org62 Profile →</a></td>
-		</tr>
-		</table>
-	<% end %>
+<div class="row">
+	<div class="col-xs-12">
+		<marquee behavior="scroll" direction="left">Next team volunteer event is August 4th... </marquee>
+	</div>
 </div>
+
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class='center'>
+			<h1>ESMB Central Solution Engineers: <%= @teams.size %></h1>
+		</div>
+	</div>
+</div>	
+
+<div class="row">
+	<div class="col-xs-3">
+	</div>
+	<div class="col-xs-6">
+		<div id="team-list">
+			<% @teams.each do |team| %>
+				<table>
+				<tr>
+					<td><img src=/<%= team.photo %>></td>
+					<td><%= team.first_name %> <%= team.last_name %></td>
+					<td><a href='<%= team.url %>' target="_blank">Org62 Profile →</a></td>
+						<td>
+						<% case team.yoda when false %>
+						<% when true %>
+							<img src='/yoda_star_wars.gif' class='yoda' />
+						<% end %>
+						</td>
+				</tr>
+				</table>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-xs-3">
+		<marquee behavior="scroll" direction="up" scrollamount="3" style="height:400px;">
+		<center><h3>5 Top Reasons why good Technology Sales Engineers are the glue in sales organizations</h3>
+			<p></p>
+			<h3>1.</h3>
+			<p>A Good Sales Engineer is equally as good at selling a technology solution to the customer as they are at designing and implementing it.</p>
+			<p></p>
+			<h3>2.</h3>
+			<p>A Good Sales Engineer is smarter than you…</p>
+			<p></p>
+			<h3>3.</h3>
+			<p>A Good Sales Engineer has the ability to uncover more opportunity in every account.</p>
+			<p></p>
+			<h3>4.</h3>
+			<p>A Good Sales Engineer knows how to explain the complicated “deep dive” technical details in simple and easy to understand language.</p>
+			<p></p>
+			<h3>5.</h3>
+			<p>A Good Sales Engineer will know when you and the customer are looking at the wrong solution and won’t be afraid to suggest the right solution.</p>
+			<p></p>
+			</center>
+		</marquee>
+		</div>
+	</div>
 </div>
 
 
