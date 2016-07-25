@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class='center'>
-			<h3>Heard a term at Salesforce you didn't recognize?</h3>
+			<h3>Heard a term at Salesforce you didn't recognize?</span></h3>
 		</div>
 	</div>
 </div>
@@ -28,61 +28,87 @@
 	</div>
 </div>
 
-
 <div class="row">
 	<div class="col-xs-12">
-		<div class='center'>
-			<h1>ESMB Central Solution Engineers: <%= @teams.size %></h1>
+		<div class="center">
+			<div class="toggleClick">
+				<a id="displayText" class="clicky" href="javascript:toggle();">ESMB Central Solution Engineers <span class="glyphicon glyphicon-info-sign"></span></a>
+			</div>
+			<div id="toggleText" style="display: none">
+				<div class="row">
+					<div class="col-xs-3">
+					</div>
+					<div class="col-xs-6">
+						<div id="team-list">
+							<% @teams.each do |team| %>
+								<table>
+								<tr>
+									<td><img src=/<%= team.photo %>></td>
+									<td><%= team.first_name %> <%= team.last_name %></td>
+									<td><a href='<%= team.url %>' target="_blank">Org62 Profile →</a></td>
+										<td>
+										<% case team.yoda when false %>
+										<% when true %>
+											<img src='/yoda_star_wars.gif' class='yoda' />
+										<% end %>
+										</td>
+								</tr>
+								</table>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>	
 
-<div class="row">
-	<div class="col-xs-3">
-	</div>
-	<div class="col-xs-6">
-		<div id="team-list">
-			<% @teams.each do |team| %>
-				<table>
-				<tr>
-					<td><img src=/<%= team.photo %>></td>
-					<td><%= team.first_name %> <%= team.last_name %></td>
-					<td><a href='<%= team.url %>' target="_blank">Org62 Profile →</a></td>
-						<td>
-						<% case team.yoda when false %>
-						<% when true %>
-							<img src='/yoda_star_wars.gif' class='yoda' />
-						<% end %>
-						</td>
-				</tr>
-				</table>
-			<% end %>
-		</div>
-	</div>
-	<div class="col-xs-3">
-		<marquee behavior="scroll" direction="up" scrollamount="3" style="height:400px;">
-		<center><h3>5 Top Reasons why good Technology Sales Engineers are the glue in sales organizations</h3>
-			<p></p>
-			<h3>1.</h3>
-			<p>A Good Sales Engineer is equally as good at selling a technology solution to the customer as they are at designing and implementing it.</p>
-			<p></p>
-			<h3>2.</h3>
-			<p>A Good Sales Engineer is smarter than you…</p>
-			<p></p>
-			<h3>3.</h3>
-			<p>A Good Sales Engineer has the ability to uncover more opportunity in every account.</p>
-			<p></p>
-			<h3>4.</h3>
-			<p>A Good Sales Engineer knows how to explain the complicated “deep dive” technical details in simple and easy to understand language.</p>
-			<p></p>
-			<h3>5.</h3>
-			<p>A Good Sales Engineer will know when you and the customer are looking at the wrong solution and won’t be afraid to suggest the right solution.</p>
-			<p></p>
-			</center>
-		</marquee>
-		</div>
-	</div>
+
+<div class="col-xs-3">
 </div>
+<div class="col-xs-6">
+	<marquee behavior="scroll" direction="up" scrollamount="2" style="height:150px;">
+	<center><h3>5 Top Reasons why good Technology Sales Engineers are the glue in sales organizations</h3>
+		<p></p>
+		<h3>one.</h3>
+		<p>A Good Sales Engineer is equally as good at selling a technology solution to the customer as they are at designing and implementing it.</p>
+		<p></p>
+		<h3>two.</h3>
+		<p>A Good Sales Engineer is smarter than you…</p>
+		<p></p>
+		<h3>three.</h3>
+		<p>A Good Sales Engineer has the ability to uncover more opportunity in every account.</p>
+		<p></p>
+		<h3>four.</h3>
+		<p>A Good Sales Engineer knows how to explain the complicated “deep dive” technical details in simple and easy to understand language.</p>
+		<p></p>
+		<h3>five.</h3>
+		<p>A Good Sales Engineer will know when you and the customer are looking at the wrong solution and won’t be afraid to suggest the right solution.</p>
+		<p></p>
+		</center>
+	</marquee>
+</div>
+<div class="col-xs-3">
+</div>	
 
 
 
+
+
+<script>
+	function toggle() {
+
+			var ele = document.getElementById("toggleText");
+			var text = document.getElementById("displayText");
+
+			if(ele.style.display == "block") 
+			{
+		    	ele.style.display = "none";
+
+		  	}
+			else {
+				ele.style.display = "block";
+
+			}
+	}
+</script>	
