@@ -43,9 +43,12 @@ input
 #search .form
 	height: 150px
 
+#search
+	padding: 25px 25px 25px 25px	
+
 .logo_pad 	
-	padding-top: 10px
-	padding-bottom: 10px
+	padding-top: 20px
+	padding-bottom: 20px
 
 .navbar-brand img
 	height: 25px
@@ -73,20 +76,20 @@ input
 
 #team-list 
 	img
-		width: 100px
-		height: 100px
+		width: 60px
+		height: 60px
 		border-radius: 35%
 		margin: 0 0 0 0
 		opacity: 0.9
 	.yoda
-		width: 48px
-		height: 48px
+		width: 35px
+		height: 35px
 		border-radius: 25%
 		margin: 0 0 0 0
 		opacity: 0.9
 		z-index: 4
 		position: relative
-		right: 400px
+		right: 170px
 	th
 		padding: 10px
 		font: 15px Arial
@@ -106,7 +109,7 @@ input
 		display: inline-block
 		border-radius: 10px
 	&:visited
-		background-color: #1798c1
+		background-color: #01a3d6
 		text-decoration: none
 		color: white
 	&:hover
@@ -120,21 +123,40 @@ input
 #team-list a
 	&:link
 		text-decoration: none
-		background-color: #1798c1
+		background-color: #01a3d6
 		color: white
-		padding: 10px 10px
+		padding: 5px 5px
 		text-align: center
 		text-decoration: none
 		display: inline-block
-		border-radius: 10px
+		border-radius: 5px
 	&:visited
-		background-color: #566b81
 		text-decoration: none
 		color: white
 	&:hover
 		background-color: #566b81
 	&:active
 		background-color: #566b81
+
+iframe
+	height: 1000px
+	width: 1000px
+
+.test + .tooltip > .tooltip-inner
+	background-color: #01a3d6
+	color: #FFFFFF
+	padding: 15px
+	font-size: 13px
+	white-space: pre-line
+
+.tooltip-inner
+	max-width: 500px
+	width: 500px
+
+.test + .tooltip.bottom > .tooltip-arrow
+	border-bottom: 5px solid #01a3d6	
+
+
 
 /* TOP PANEL */
 
@@ -176,4 +198,56 @@ input
 .clearfooter
 	height: 50px
 	clear: both
+
+
+.navbar 
+	margin-bottom: 0
+	border-radius: 0
+    
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content 
+	height: 450px
+
+/* Set gray background color and 100% height */
+.sidenav
+	padding-top: 20px
+	background-color: #f8f8f8
+	border-color: #e7e7e7
+	height: 100%
+
+/* Set black background color, white text and some padding */
+footer
+	background-color: #555
+	color: white
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px)
+.sidenav
+	height: auto
+	background-color: #f8f8f8
+	border-color: #e7e7e7
+
+.notes
+	height: 46px
+	background-color: #01a3d6
+	color: #FFFFFF
+	font-size: 22px
+
+
+.container
+	width: 100%
+	padding: 0 0 0 0
+
+.carousel-control.right 
+	background-image: none
+
+.carousel-control.left 
+	background-image: none
+
+.carousel-content
+	padding: 12px 12px 12px 12px
+
+
+
 

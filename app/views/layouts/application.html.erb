@@ -13,19 +13,13 @@
 <%= render 'layouts/navigation' %>
 
     <div id="main-container" class="container">
-      <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-3 sidenav">
+          <%= render :partial => 'team/team_list' %>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-9">
           <%= yield %>
         </div>
-      </div>
     </div>
-
-	<div class="clearfooter">
-	</div>
 
 <%= render 'layouts/footer' %>
 

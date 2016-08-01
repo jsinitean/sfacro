@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-xs-12 notes">
+		<%= render :partial => 'team/marquee' %> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div id="search" >
+		  <%= render :partial => 'team/search' %>
+		  <p></p>
+		  <p><i>While you're at it, search some other terms</i></p>
+		</div>
+	</div>
+</div>		
+
+<div class="row">
+	<div class="col-xs-12">
+		<div id="term-listing">
+		  <%= render :partial => 'team/search_results' %>
+		</div>
+	</div>
+</div>		
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="logo_pad">
+			<%= image_tag 'logo2.png', :size => '180x113' %>
+		</div>	
+	</div>
+</div>
+

@@ -1,0 +1,17 @@
+ <h3>ESMB Central Solution Engineers</h3>
+ <div id="team-list">
+  <% @teams.each do |team| %>
+    <table>
+    <tr>
+      <td><img src=/<%= team.photo %>></td>
+      <td><a href='<%= team.url %>' target="_blank"><%= team.first_name %> <%= team.last_name %> →</a></td>
+        <td>
+        <% case team.yoda when false %>
+        <% when true %>
+          <img src='/yoda_star_wars.gif' class='yoda' />
+        <% end %>
+        </td>
+    </tr>
+    </table>
+  <% end %>
+</div>
