@@ -11,7 +11,7 @@ class SalesforceUser < ActiveRecord::Base
 	}
 
 	scope :ceo, -> {
-		where('salesforce.user.keyuser = true')
+		where('salesforce.user.Key_User__c = true')
 	}
 
 	
