@@ -16,14 +16,14 @@ class TeamController < ApplicationController
 
   def search
     @terms = TermList.search params[:search]
-    @teams = Team.sorted
+    @teams = SalesforceUser.active.ceo.sorted
     @team_size = @teams.size
 
   end
 
   def show
     @terms = TermList.find(params[:id])
-    @teams = Team.sorted
+    @teams = SalesforceUser.active.ceo.sorted
     @team_size = @teams.size
   end
 
