@@ -5,4 +5,9 @@ class SalesforceUser < ActiveRecord::Base
 	scope :sorted, -> {
 		order('salesforce.user.name ASC')
 	}
+
+	scope :active, -> {
+		where('salesforce.user.isactive = true')
+	}
+
 end
