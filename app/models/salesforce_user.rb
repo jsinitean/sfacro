@@ -10,4 +10,10 @@ class SalesforceUser < ActiveRecord::Base
 		where('salesforce.user.isactive = true')
 	}
 
+	scope :ceo, -> {
+		where('salesforce.user.keyuser = true')
+	}
+
+	
+
 end

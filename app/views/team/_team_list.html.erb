@@ -3,10 +3,10 @@
   <% @teams.each do |team| %>
     <table>
     <tr>
-      <td><img src=/<%= team.photo %>></td>
-      <td><a href='<%= team.url %>' target="_blank"><%= team.first_name %> <%= team.last_name %> →</a></td>
+      <td><img src=<%= team.smallphotourl %>></td>
+      <td><a href='login.salesforce.com' target="_blank"><%= team.name %> →</a></td>
         <td>
-        <% case team.yoda when false %>
+        <% case team.yoda__c when false %>
         <% when true %>
           <img src='/yoda_star_wars.gif' class='yoda' />
         <% end %>

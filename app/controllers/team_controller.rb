@@ -5,9 +5,8 @@ class TeamController < ApplicationController
   end
 
   def all
-  	 @teams = Team.sorted
-  	 @team_size = @teams.size
-     @salesforce_user = SalesforceUser.active.sorted
+     @teams = SalesforceUser.active.ceo.sorted
+     @team_size = @teams.size
      #@user = SalesforceUser.find(params[:user_id])
   end
 
