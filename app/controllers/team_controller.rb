@@ -7,6 +7,8 @@ class TeamController < ApplicationController
   def all
   	 @teams = Team.sorted
   	 @team_size = @teams.size
+     @salesforce_user = SalesforceUser.sorted
+     #@user = SalesforceUser.find(params[:user_id])
   end
 
   def heroku
