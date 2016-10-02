@@ -5,24 +5,15 @@
 
 
             <div class="carousel-inner">
+                <% @events.each do |event| %>
                 <div class="item active">   
                     <div class="carousel-content">
                         <div>
-                        <% @events.each do |event| %>
                           <p><%= event.subject %> @ <%= event.startdatetime %></p>
-                        <% end %>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>
-                        <% @events.each do |event| %>
-                          <p><%= event.subject %></p>
-                        <% end %>
-                        </div>
-                    </div>
-                </div>
+                <% end %>
             </div>
 
 
