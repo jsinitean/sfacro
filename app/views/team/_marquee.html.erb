@@ -1,49 +1,28 @@
 <div id="text-carousel" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
 
+
+
+
             <div class="carousel-inner">
-                <div class="item active">
+                <div class="item active">   
                     <div class="carousel-content">
                         <div>
-                            <p>August 1st: Daily Demo is back in ChiHub</p>
+                        <% @events.each do |event| %>
+                          <p><%= event.subject %> @ <%= event.startdatetime %></p>
+                        <% end %>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="carousel-content">
                         <div>
-                            <p>August 5th: ESMB Volleyball Tournament</p>
+                        <% @events.each do |event| %>
+                          <p><%= event.subject %></p>
+                        <% end %>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>
-                            <p>August 9th @ 4pm: Chicago Office Olympics on 10</p>
-                        </div>
-                    </div>
-                </div>
-				<div class="item">
-                    <div class="carousel-content">
-                        <div>
-                            <p>August 11th: Chicago Talks on Customer Success</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>
-                            <p>August 18th: ChicagoHub Q3 Volunteer Day</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>                          
-                            <p>August 19th: 4th Annual Salesforce MS Golf Outing & BBQ Social</p>
-                        </div>
-                    </div>
-                </div> 
             </div>
 
 
