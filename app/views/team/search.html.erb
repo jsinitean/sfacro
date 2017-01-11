@@ -1,27 +1,25 @@
-
 <div class="row">
-	<div class="col-xs-12">
-		<div id="search" >
-		  <%= render :partial => 'team/search' %>
-		  <p></p>
-		  <p><i>While you're at it, search some other terms</i></p>
-		</div>
+	<div class="col-xs-4">
 	</div>
-</div>		
+	<div class="col-xs-4">
+		<%= render :partial => 'team/logo' %>
+	</div>
+	<div class="col-xs-4">
+	</div>
+</div>
+
+<div class="col-xs-12 search-section2">
+	<h2>Heard a term at Salesforce you didn't recognize?</h2>
+	<div id="search">
+		<%= render :partial => 'team/search' %>
+	</div>
+</div>
 
 <div class="row">
-	<div class="col-xs-12">
+	<div class="col-xs-12 search-results">
+		<p>Results...</p>
 		<div id="term-listing">
 		  <%= render :partial => 'team/search_results' %>
 		</div>
 	</div>
 </div>		
-
-<div class="row">
-	<div class="col-xs-12">
-		<div class="logo_pad">
-			<%= image_tag 'logo2.png', :size => '180x113' %>
-		</div>	
-	</div>
-</div>
-

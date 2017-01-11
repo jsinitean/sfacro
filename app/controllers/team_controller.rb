@@ -9,6 +9,16 @@ class TeamController < ApplicationController
      @team_size = @teams.size
      @events = SalesforceEvent.today.sorted
   end
+  
+  def download
+    file = "#{Rails.root}/User_License_Comparison.pdf"
+    if File.exists?(file)
+      send_file file, :type=>"application/pdf", :x_sendfile=>true
+    else
+      flash[:notice] = 'File not found'
+      redirect_to :index
+    end
+  end
 
   def heroku
  
